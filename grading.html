@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="grade.css">
+  <script>
+    function total() {
+      var sub1 = parseInt(document.getElementById("eng").value);
+      var sub2 = parseInt(document.getElementById("urd").value);
+      var sub3 = parseInt(document.getElementById("math").value);
+      var sub4 = parseInt(document.getElementById("comp").value);
+      var sub5 = parseInt(document.getElementById("phy").value);
+      if (sub1 > 100 || sub2 > 100 || sub3 > 100 || sub4 > 100 || sub5 > 100) {
+        alert("Please Enter Marks Between 1-100")
+      } else {
+        var total = sub1 + sub2 + sub3 + sub4 + sub5;
+        document.getElementById("output").innerHTML = "Your total marks is :" + total;
+      }
+    }
+    function average() {
+      var sub1 = parseInt(document.getElementById("eng").value);
+      var sub2 = parseInt(document.getElementById("urd").value);
+      var sub3 = parseInt(document.getElementById("math").value);
+      var sub4 = parseInt(document.getElementById("comp").value);
+      var sub5 = parseInt(document.getElementById("phy").value);
+      if (sub1 > 100 || sub2 > 100 || sub3 > 100 || sub4 > 100 || sub5 > 100) {
+        alert("Please Enter Marks Between 1-100")
+      } else {
+        var total = sub1 + sub2 + sub3 + sub4 + sub5;
+        var avg = total / 5
+        document.getElementById("output").innerHTML = "Your Average Marks is" + avg;
+
+      }
+    }
+      function perc() {
+        var sub1 = parseInt(document.getElementById("eng").value);
+        var sub2 = parseInt(document.getElementById("urd").value);
+        var sub3 = parseInt(document.getElementById("math").value);
+        var sub4 = parseInt(document.getElementById("comp").value);
+        var sub5 = parseInt(document.getElementById("phy").value);
+        if (sub1 > 100 || sub2 > 100 || sub3 > 100 || sub4 > 100 || sub5 > 100) {
+          alert("Please Enter Marks Between 1-100")
+        } else {
+          var total = sub1 + sub2 + sub3 + sub4 + sub5;
+          var avg = total / 5
+          if (avg >= 80 && avg <= 100) {
+            document.getElementById("output").innerHTML = "Your Grade is A+"
+          } else if (avg >= 75 && avg <= 80) {
+            document.getElementById("output").innerHTML = "Your Grade is A"
+          } else if (avg >= 75 && avg <= 80) {
+            document.getElementById("output").innerHTML = "Your Grade is B+"
+          } else if (avg >= 70 && avg <= 75) {
+            document.getElementById("output").innerHTML = "Your Grade is B"
+          } else if (avg >= 65 && avg <= 70) {
+            document.getElementById("output").innerHTML = "Your Grade is C+"
+          } else if (avg >= 60 && avg <= 65) {
+            document.getElementById("output").innerHTML = "Your Grade is C"
+          } else if (avg >= 55 && avg <= 60) {
+            document.getElementById("output").innerHTML = "Your Grade is D+"
+          } else if (avg >= 50 && avg <= 55) {
+            document.getElementById("output").innerHTML = "Your Grade is D"
+          } else {
+            document.getElementById("output").innerHTML = "You Are Fail In Exam"
+          }
+
+
+        }
+
+      }
+  </script>
+</head>
+
+<body>
+  <center>
+    <div id="main">
+      <div>
+        <h1>GRADING SYSTEM</h1>
+      </div>
+      <label>English</label><input type="text" id="eng"><br>
+      <label>Urdu</label><input type="text" id="urd"><br>
+      <label>Math</label><input type="text" id="math"><br>
+      <label>Computer</label><input type="text" id="comp"><br>
+      <label>Physics</label><input type="text" id="phy"><br>
+      <br>
+      <button onclick="total()" class="btn1">Total</button>
+      <button onclick="average()" class="btn1">Average</button>
+      <button onclick="perc()"class="btn1">Grade</button>
+      <br>
+      <br>
+      <div id="output"></div>
+  
+  
+    </div>
+  </center>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
